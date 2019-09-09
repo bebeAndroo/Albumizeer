@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="albumviewmodel"
+            type="com.yenimobile.albumizeer.ui.DeezAlbumViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.AlbumdetailsActivity"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:background="#2859a8"
+        >
+
+        <ImageView
+            android:id="@+id/details_album_IV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/deatails_album_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Groooovy grooove"
+            android:layout_gravity="center_horizontal"
+            android:text="@{albumviewmodel.deezAlbumTitle}"/>
+
+        <ImageView
+            android:id="@+id/details_artiste_IV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            tools:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            android:id="@+id/deatails_artiste_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Sommme artiste mffffff"
+            android:text="@{albumviewmodel.deezArtisteName}"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+</layout>
